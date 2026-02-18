@@ -81,3 +81,29 @@ footer {
   padding: 20px;
   color: #777;
 }
+
+/* ===== EDUCATION / ACCORDION ===== */
+
+.education {
+  margin-top: 40px;
+}
+
+details {
+  background: #f5f7fb;
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+summary {
+  font-weight: 600;
+  font-size: 18px;
+  color: #005bea;
+}
+
+details p {
+  margin-top: 10px;
+  color: #444;
+}
+
