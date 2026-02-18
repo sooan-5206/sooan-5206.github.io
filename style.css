@@ -1,3 +1,11 @@
+:root {
+  --primary: #ff4d8d;      /* hồng chủ đạo */
+  --primary-light: #ff85b3;
+  --bg-light: #fdf2f7;
+  --text-dark: #333;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -10,17 +18,17 @@ html {
 }
 
 body {
-  background: #f5f7fb;
-  color: #333;
+  background: var(--bg-light);
+  color: var(--text-dark);
   line-height: 1.6;
 }
 
 /* HERO */
 .hero {
-  background: linear-gradient(135deg, #005bea, #00c6fb);
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
   color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: 70px 20px;
 }
 
 .hero img {
@@ -51,7 +59,7 @@ section {
 section h2 {
   font-size: 26px;
   margin-bottom: 15px;
-  color: #005bea;
+  color: var(--primary);
 }
 
 /* PROJECTS */
@@ -93,17 +101,17 @@ footer {
 }
 
 details {
-  background: #f5f7fb;
-  border-radius: 12px;
-  padding: 15px 20px;
+  background: white;
+  border-radius: 14px;
+  padding: 18px 22px;
   margin-bottom: 15px;
-  cursor: pointer;
+  border-left: 5px solid var(--primary);
 }
 
 summary {
   font-weight: 600;
   font-size: 18px;
-  color: #005bea;
+  color: var(--primary);
 }
 
 details p {
@@ -130,7 +138,7 @@ details p {
   top: 0;
   background: white;
   z-index: 1000;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 20px rgba(255, 77, 141, 0.15);
 }
 
 .navbar ul {
@@ -149,7 +157,7 @@ details p {
 }
 
 .navbar a:hover {
-  color: #005bea;
+  color: var(--primary);
 }
 
 #toggle-theme {
@@ -182,7 +190,7 @@ details p {
 
 /* ===== TIMELINE ===== */
 .timeline {
-  border-left: 3px solid #005bea;
+  border-left: 3px solid var(--primary);
   padding-left: 20px;
 }
 
@@ -192,24 +200,27 @@ details p {
 
 .timeline-item span {
   font-weight: bold;
-  color: #005bea;
+  color: var(--primary);
 }
 
 /* ===== DARK MODE ===== */
 body.dark {
-  background: #121212;
-  color: #eee;
+  background: #1a0f14;
+  color: #f5dbe6;
 }
 
 body.dark .navbar,
 body.dark .project-card,
 body.dark .skill-card,
-body.dark .about {
-  background: #1e1e1e;
+body.dark .about,
+body.dark details {
+  background: #26161f;
 }
 
-body.dark a {
-  color: #eee;
+body.dark summary,
+body.dark .timeline-item span,
+body.dark section h2 {
+  color: var(--primary-light);
 }
 
 .fade-in {
@@ -222,6 +233,27 @@ body.dark a {
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  section {
+    margin: 30px auto;
+  }
+
+  .about {
+    padding: 25px;
+  }
+}
+
+
 
 
 
