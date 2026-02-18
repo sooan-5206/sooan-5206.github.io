@@ -195,6 +195,34 @@ details p {
   color: #005bea;
 }
 
+/* ===== DARK MODE ===== */
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark .navbar,
+body.dark .project-card,
+body.dark .skill-card,
+body.dark .about {
+  background: #1e1e1e;
+}
+
+body.dark a {
+  color: #eee;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 
 
