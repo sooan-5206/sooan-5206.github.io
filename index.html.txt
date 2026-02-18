@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Nguyễn Xuân An | Portfolio</title>
+
+  <!-- Gắn CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <img src="assets/avatar.jpg" alt="Ảnh đại diện">
+    <h1>Nguyễn Xuân An</h1>
+    <p>Sinh viên Trường Đại học Ngoại Thương | Nghiên cứu</p>
+  </header>
+
+  <!-- Gắn JS (luôn đặt CUỐI body) -->
+  <script src="script.js"></script>
+</body>
+</html>

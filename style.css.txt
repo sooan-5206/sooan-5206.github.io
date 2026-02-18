@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+section {
+  padding: 80px 20%;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 10%;
+  }
+}
