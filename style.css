@@ -31,14 +31,57 @@ body {
   box-shadow: 0 5px 20px rgba(255, 77, 141, 0.15);
 }
 
+/* ===== NAVBAR ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 5px 20px rgba(255, 77, 141, 0.15);
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--primary);
+}
+
+/* wrapper cho navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar > .logo,
+.navbar > ul {
+  max-width: 1100px;
+}
+
+/* MENU */
 .navbar ul {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
-  gap: 25px;
-  padding: 15px;
+  gap: 32px;
+  padding: 15px 20px;
+  flex-wrap: nowrap;      /* 🔑 không cho rớt item */
 }
+
+.navbar li {
+  white-space: nowrap;    /* 🔑 không gãy chữ */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  color: var(--primary);
+}
+
 
 .navbar a {
   text-decoration: none;
@@ -191,4 +234,5 @@ section h2 {
     background: #26161f;
   }
 }
+
 
