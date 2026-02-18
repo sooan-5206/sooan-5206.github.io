@@ -120,5 +120,40 @@ details p {
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
+/* ===== NAVBAR ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 25px;
+  padding: 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  color: #005bea;
+}
+
+#toggle-theme {
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
 
 
