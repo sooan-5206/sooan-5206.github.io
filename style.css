@@ -180,6 +180,23 @@ details p {
   transform: translateY(-5px);
 }
 
+/* ===== TIMELINE ===== */
+.timeline {
+  border-left: 3px solid #005bea;
+  padding-left: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 25px;
+}
+
+.timeline-item span {
+  font-weight: bold;
+  color: #005bea;
+}
+
+
+
 
 
 
