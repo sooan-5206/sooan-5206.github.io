@@ -186,45 +186,109 @@ body {
   }
 }
 
-/* ===== VOLUNTEER TABS ===== */
+/* ================= VOLUNTEER FILMOGRAPHY STYLE ================= */
 
-.volunteer-tabs {
+.volunteer-page {
+  background: #000;
+  color: #fff;
+  padding: 200px 0 150px 0;
+  min-height: 100vh;
+}
+
+.volunteer-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* TITLE giống FILMOGRAPHY */
+.volunteer-title {
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+/* MENU giống AWARDS DRAMA */
+.volunteer-menu {
   display: flex;
-  gap: 40px;
+  justify-content: center;
+  gap: 60px;
   margin-bottom: 40px;
 }
 
-.tab {
+.vol-tab {
   background: none;
   border: none;
-  font-size: 13px;
+  color: #aaa;
+  font-size: 16px;
   letter-spacing: 2px;
   cursor: pointer;
-  color: #999;
   transition: 0.3s;
 }
 
-.tab:hover {
-  color: #000;
+.vol-tab:hover {
+  color: #fff;
 }
 
-.tab.active {
-  color: #000;
+.vol-tab.active {
+  color: #fff;
   font-weight: 600;
 }
 
-.divider {
+.vol-divider {
   height: 1px;
-  background: #ddd;
-  margin-bottom: 50px;
+  background: #333;
+  margin: 40px 0 60px 0;
 }
 
-.volunteer-group {
-  display: none;
+/* CONTENT */
+.vol-content {
+  display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-.volunteer-group.active {
+.vol-group {
+  display: none;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.vol-group.active {
   display: flex;
+}
+
+/* ITEM giống dòng year + nội dung */
+.vol-item {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.vol-year {
+  min-width: 80px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.vol-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .volunteer-title {
+    font-size: 40px;
+  }
+
+  .vol-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+
 }
