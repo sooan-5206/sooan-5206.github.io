@@ -7,27 +7,34 @@ hamburger.addEventListener("click", () => {
 
 // ===== VOLUNTEER TAB FILTER =====
 
-const tabs = document.querySelectorAll(".tab");
-const groups = document.querySelectorAll(".volunteer-group");
+document.addEventListener("DOMContentLoaded", function() {
 
-tabs.forEach(tab => {
-  tab.addEventListener("click", () => {
+  const tabs = document.querySelectorAll(".vol-tab");
+  const groups = document.querySelectorAll(".vol-group");
 
-    // remove active tab
-    tabs.forEach(t => t.classList.remove("active"));
-    tab.classList.add("active");
+  if (tabs.length > 0) {
 
-    const category = tab.getAttribute("data-category");
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
 
-    groups.forEach(group => {
-      if (group.getAttribute("data-category") === category) {
-        group.classList.add("active");
-      } else {
-        group.classList.remove("active");
-      }
+        tabs.forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+
+        const category = tab.getAttribute("data-category");
+
+        groups.forEach(group => {
+          if (group.getAttribute("data-category") === category) {
+            group.classList.add("active");
+          } else {
+            group.classList.remove("active");
+          }
+        });
+
+      });
     });
-  });
-});
 
-// mặc định hiển thị FTU
-document.querySelector('.volunteer-group[data-category="ftu"]').classList.add("active");
+    document.querySelector('.vol-group[data-category="ftu"]').classList.add("active");
+
+  }
+
+});
