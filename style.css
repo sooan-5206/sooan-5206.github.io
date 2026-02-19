@@ -53,6 +53,7 @@ body {
 .split-layout {
   height: 100vh;
   overflow: hidden;
+  margin-top: 100px;
 }
 
 .split-container {
@@ -190,4 +191,5 @@ footer {
   }
 
 }
+
 
