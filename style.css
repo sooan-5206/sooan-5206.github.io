@@ -297,32 +297,31 @@ body {
 
 .vol-item {
   display: flex;
-  gap: 40px;
+  flex-direction: column;   /* quan trọng */
+  gap: 15px;
   cursor: pointer;
   padding: 20px 0;
 }
 
 .vol-left {
-  flex: 1;
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
 }
 
-/* Ẩn ảnh mặc định */
 .vol-images {
   display: none;
+  width: 100%;
 }
 
-/* Khi active mới hiện */
 .vol-item.active .vol-images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
-/* Ảnh nhỏ lại */
 .vol-images img {
   width: 100%;
   height: 120px;
   object-fit: cover;
-  border-radius: 8px;
-}
