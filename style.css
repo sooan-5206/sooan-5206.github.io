@@ -325,3 +325,20 @@ body {
   width: 100%;
   height: 120px;
   object-fit: cover;
+
+.vol-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.vol-detail {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  display: none;
+}
+
+.vol-item.active .vol-detail {
+  display: block;
+}
