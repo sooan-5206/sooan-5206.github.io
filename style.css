@@ -185,3 +185,46 @@ body {
     display: block;
   }
 }
+
+/* ===== VOLUNTEER TABS ===== */
+
+.volunteer-tabs {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-size: 13px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: #999;
+  transition: 0.3s;
+}
+
+.tab:hover {
+  color: #000;
+}
+
+.tab.active {
+  color: #000;
+  font-weight: 600;
+}
+
+.divider {
+  height: 1px;
+  background: #ddd;
+  margin-bottom: 50px;
+}
+
+.volunteer-group {
+  display: none;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.volunteer-group.active {
+  display: flex;
+}
