@@ -297,45 +297,47 @@ body {
 
 .vol-item {
   display: flex;
-  flex-direction: column;
+  gap: 60px;
   padding: 80px 0;
   border-bottom: 1px solid #1a1a1a;
   cursor: pointer;
+  align-items: flex-start;
 }
 
 .vol-year {
-  font-size: 28px;
+  min-width: 90px;
+  font-size: 20px;
   font-weight: 600;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
   color: #fff;
+  opacity: 0.7;
 }
 
 .vol-info {
   display: flex;
   flex-direction: column;
-  max-width: 800px;
+  max-width: 700px;
 }
 
 .vol-text {
   font-size: 26px;
   font-weight: 500;
-  margin-bottom: 15px;
   line-height: 1.4;
   color: #fff;
+  letter-spacing: 0.5px;
 }
 
 .vol-detail {
   font-size: 15px;
   color: #aaa;
   line-height: 1.8;
-  margin-bottom: 30px;
+  margin-top: 12px;
   display: none;
 }
 
 .vol-item.active .vol-detail {
   display: block;
 }
+
 
 /* Images */
 
@@ -380,4 +382,5 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
