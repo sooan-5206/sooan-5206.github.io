@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   /* ===== HAMBURGER ===== */
   const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("nav-menu");
+  const navMenu = document.querySelector(".menu");
 
   if (hamburger && navMenu) {
     hamburger.addEventListener("click", () => {
@@ -35,14 +35,10 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
 
-    // default show FTU
-    const defaultGroup = document.querySelector('.vol-group[data-category="ftu"]');
-    if (defaultGroup) {
-      defaultGroup.classList.add("active");
-    }
+    tabs[0].click(); // default tab
   }
 
-  /* ===== VOLUNTEER EVENT ACCORDION ===== */
+  /* ===== VOLUNTEER ACCORDION ===== */
   const volItems = document.querySelectorAll(".vol-item");
 
   volItems.forEach(item => {
@@ -59,8 +55,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-});
-
   /* ===== EXPERIENCE TAB FILTER ===== */
   const expTabs = document.querySelectorAll(".exp-tab");
   const expGroups = document.querySelectorAll(".exp-group");
@@ -71,25 +65,20 @@ document.addEventListener("DOMContentLoaded", function() {
       tab.addEventListener("click", () => {
 
         expTabs.forEach(t => t.classList.remove("active"));
+        expGroups.forEach(g => g.classList.remove("active"));
+
         tab.classList.add("active");
 
         const category = tab.getAttribute("data-category");
 
-        expGroups.forEach(group => {
-          if (group.getAttribute("data-category") === category) {
-            group.classList.add("active");
-          } else {
-            group.classList.remove("active");
-          }
-        });
+        document
+          .querySelector(`.exp-group[data-category="${category}"]`)
+          .classList.add("active");
 
       });
     });
 
-    // Default show first tab
-    expTabs[0].click();
+    expTabs[0].click(); // default tab
   }
 
-})
-
-
+});
