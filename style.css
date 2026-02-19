@@ -1,10 +1,18 @@
+/* ===============================
+   ROOT VARIABLES
+=================================*/
 :root {
   --primary: #ff4d8d;
   --primary-light: #ff85b3;
   --bg-light: #fdf2f7;
   --text-dark: #333;
+  --dark-bg: #111;
+  --dark-card: #000;
 }
 
+/* ===============================
+   GLOBAL
+=================================*/
 html {
   scroll-behavior: smooth;
 }
@@ -22,7 +30,9 @@ body {
   line-height: 1.6;
 }
 
-/* NAVBAR */
+/* ===============================
+   NAVBAR
+=================================*/
 .navbar {
   position: sticky;
   top: 0;
@@ -31,142 +41,6 @@ body {
   box-shadow: 0 5px 20px rgba(255, 77, 141, 0.15);
 }
 
-/* ===== NAVBAR ===== */
-.navbar {
-  position: sticky;
-  top: 0;
-  background: white;
-  z-index: 1000;
-  box-shadow: 0 5px 20px rgba(255, 77, 141, 0.15);
-}
-
-.navbar .logo {
-  font-weight: 700;
-  font-size: 18px;
-  color: var(--primary);
-}
-
-/* wrapper cho navbar */
-.navbar {
-  display: flex;
-  justify-content: center;
-}
-
-.navbar > .logo,
-.navbar > ul {
-  max-width: 1100px;
-}
-
-/* MENU */
-.navbar ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  gap: 32px;
-  padding: 15px 20px;
-  flex-wrap: nowrap;      /* 🔑 không cho rớt item */
-}
-
-.navbar li {
-  white-space: nowrap;    /* 🔑 không gãy chữ */
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-}
-
-.navbar a:hover {
-  color: var(--primary);
-}
-
-
-.navbar a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-}
-
-.navbar a:hover {
-  color: var(--primary);
-}
-
-#toggle-theme {
-  border: none;
-  background: none;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-/* HERO */
-.hero {
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  color: white;
-  text-align: center;
-  padding: 70px 20px;
-}
-
-.hero img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 4px solid white;
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  font-size: 32px;
-}
-
-/* SECTION */
-section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-section h2 {
-  font-size: 26px;
-  margin-bottom: 15px;
-  color: var(--primary);
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-}
-
-/* ABOUT */
-.about {
-  background: white;
-  border-radius: 16px;
-  padding: 40px;
-  box-shadow: 0 20px 40px rgba(255, 77, 141, 0.15);
-}
-
-/* TIMELINE */
-.timeline {
-  border-left: 3px solid var(--primary);
-  padding-left: 20px;
-}
-
-.timeline-item {
-  margin-bottom: 25px;
-}
-
-.timeline-item span {
-  font-weight: bold;
-  color: var(--primary);
-}
-
-/* SKILLS */
-.skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fi
-
-/* ===== NAVBAR LAYOUT ===== */
 .nav-container {
   max-width: 1100px;
   margin: auto;
@@ -178,11 +52,34 @@ section h2 {
 
 .logo {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--primary);
 }
 
-/* ===== HAMBURGER ===== */
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-menu li {
+  white-space: nowrap;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover {
+  color: var(--primary);
+}
+
+/* ===============================
+   HAMBURGER
+=================================*/
 .hamburger {
   display: none;
   flex-direction: column;
@@ -198,15 +95,193 @@ section h2 {
   transition: 0.3s;
 }
 
-/* ===== MENU ===== */
-.nav-menu {
-  display: flex;
-  gap: 25px;
-  list-style: none;
+/* ===============================
+   HERO (Homepage)
+=================================*/
+.hero {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
 }
 
-/* ===== MOBILE ===== */
+.hero img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* ===============================
+   SECTION (Homepage)
+=================================*/
+section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+section h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.about {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(255, 77, 141, 0.15);
+}
+
+/* ===============================
+   TIMELINE
+=================================*/
+.timeline {
+  border-left: 3px solid var(--primary);
+  padding-left: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 25px;
+}
+
+.timeline-item span {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+/* ===============================
+   SUBPAGE (Dark Layout)
+=================================*/
+.subpage {
+  background: linear-gradient(135deg, #111, #1a1a1a);
+  min-height: 100vh;
+  padding: 100px 20px;
+}
+
+.sub-container {
+  max-width: 1000px;
+  margin: auto;
+  background: var(--dark-card);
+  border-radius: 30px;
+  padding: 70px 60px;
+  color: white;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.6s ease;
+}
+
+.sub-container h1 {
+  text-align: center;
+  font-size: 42px;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+
+/* SUB MENU */
+.sub-menu {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.sub-menu a {
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.sub-menu a:hover {
+  color: white;
+}
+
+/* DIVIDER */
+.sub-divider {
+  height: 1px;
+  background: #333;
+  margin: 30px 0 50px;
+}
+
+/* CONTENT */
+.sub-content {
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.sub-item {
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+
+.sub-item:hover {
+  transform: translateX(6px);
+}
+
+.sub-item span {
+  font-weight: bold;
+  color: var(--primary);
+  margin-right: 15px;
+}
+
+/* ===============================
+   CONTACT FORM
+=================================*/
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+}
+
+.contact-form button {
+  padding: 12px 20px;
+  background: var(--primary);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: var(--primary-light);
+}
+
+/* ===============================
+   ANIMATION
+=================================*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+=================================*/
 @media (max-width: 768px) {
+
   .hamburger {
     display: flex;
   }
@@ -220,7 +295,7 @@ section h2 {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 25px 0;
+    padding: 30px 0;
     transform: translateY(-120%);
     transition: 0.4s ease;
     box-shadow: 0 15px 30px rgba(255, 77, 141, 0.2);
@@ -230,9 +305,12 @@ section h2 {
     transform: translateY(0);
   }
 
-  body.dark .nav-menu {
-    background: #26161f;
+  .sub-container {
+    padding: 40px 25px;
   }
+
+  .sub-container h1 {
+    font-size: 28px;
+  }
+
 }
-
-
