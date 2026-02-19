@@ -60,3 +60,22 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 });
+
+// EXPERIENCE TAB
+const expTabs = document.querySelectorAll(".exp-tab");
+const expGroups = document.querySelectorAll(".exp-group");
+
+expTabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+
+    expTabs.forEach(t => t.classList.remove("active"));
+    expGroups.forEach(g => g.classList.remove("active"));
+
+    tab.classList.add("active");
+
+    const category = tab.getAttribute("data-category");
+    document
+      .querySelector(`.exp-group[data-category="${category}"]`)
+      .classList.add("active");
+  });
+});
