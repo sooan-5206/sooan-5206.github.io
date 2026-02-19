@@ -4,61 +4,84 @@
   <meta charset="UTF-8">
   <title>Xuân An | Volunteer</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 
 <body>
 
-<!-- ===== NAVBAR (ĐỒNG BỘ INDEX) ===== -->
 <nav class="main-nav">
   <div class="logo">XUÂN AN</div>
 
-  <ul class="menu">
+  <ul class="menu" id="nav-menu">
     <li><a href="index.html">ABOUT</a></li>
     <li><a href="experience.html">WORK/STUDY</a></li>
     <li><a href="research.html">RESEARCH</a></li>
-    <li><a href="volunteer.html">VOLUNTEER</a></li>
+    <li><a href="volunteer.html" class="active">VOLUNTEER</a></li>
     <li><a href="contact.html">CONTACT</a></li>
   </ul>
+
+  <div id="hamburger">☰</div>
 </nav>
 
-<!-- ===== CONTENT ===== -->
 <section class="subpage">
   <div class="sub-container">
 
     <h1>VOLUNTEER</h1>
 
-    <div class="sub-divider"></div>
+    <!-- CATEGORY MENU -->
+    <div class="volunteer-tabs">
+      <button class="tab active" data-category="ftu">FTU</button>
+      <button class="tab" data-category="run">GIẢI CHẠY</button>
+      <button class="tab" data-category="other">KHÁC</button>
+    </div>
 
-    <div class="sub-content">
+    <div class="divider"></div>
 
-      <div class="sub-item">
-        <span>Standard Chartered Hanoi Marathon – Heritage Race 2025</span>
-        <p>Race Kit Volunteer | Tháng 11/2025 | Hà Nội</p>
-        <p>Chuẩn bị và phát race kit, hỗ trợ điều phối khu vực check-in trước ngày thi đấu.</p>
+    <!-- CONTENT -->
+    <div class="volunteer-content">
+
+      <!-- FTU -->
+      <div class="volunteer-group" data-category="ftu">
+        <div class="sub-item">
+          <span>FTU Career Day 2025</span>
+          <p>Vai trò: Cộng tác viên</p>
+          <p>Cụ thể: Support & Take-care doanh nghiệp iKame</p>
+          <p>Thời gian: Tháng 11/2025</p>
+        </div>
+
+        <div class="sub-item">
+          <span>Lễ Trao bằng Tốt nghiệp K60</span>
+          <p>Vai trò: TNV Điều phối </p>
+          <p>Thời gian: Tháng 11/2025</p>
+          <p>Địa điểm: Trung tâm hội nghị quốc gia - NCC</p>
+        </div>
+
+        <div class="sub-item">
+          <span>Nhập học Tân sinh viên K64</span>
+          <p>Vai trò: TNV Điều phối </p>
+          <p>Thời gian: Tháng 11/2025</p>
+        </div>
       </div>
 
-      <div class="sub-item">
-        <span>VnExpress Marathon All-Star 2026</span>
-        <p>Race Kit Volunteer | Tháng 2/2026 | ParkCity – The LinC</p>
-        <p>Hỗ trợ vận hành khu vực nhận race kit, hướng dẫn vận động viên và phối hợp BTC.</p>
+      <!-- RUN -->
+      <div class="volunteer-group" data-category="run">
+        <div class="sub-item">
+          <span>Standard Chartered Hanoi Marathon 2025</span>
+          <p>Race Kit Volunteer | Cung thể thao Quần Ngựa</p>
+        </div>
+
+        <div class="sub-item">
+          <span>VnExpress Marathon All-Star 2026</span>
+          <p>Race Kit Volunteer | Khu đô thị ParkCity - the LinC</p>
+        </div>
       </div>
 
-      <div class="sub-item">
-        <span>FTU Career Day 2025</span>
-        <p>Support & Take-care doanh nghiệp iKame | 2025</p>
-        <p>Hỗ trợ setup gian hàng, kết nối sinh viên và điều phối hoạt động tuyển dụng.</p>
-      </div>
-
-      <div class="sub-item">
-        <span>Lễ Trao bằng Tốt nghiệp K60 FTU</span>
-        <p>Điều phối | Tháng 9/2025</p>
-        <p>Điều phối sinh viên & khách mời, hỗ trợ tổ chức chương trình.</p>
-      </div>
-
-      <div class="sub-item">
-        <span>Nhập học Tân sinh viên K64 FTU</span>
-        <p>Điều phối | Tháng 9/2025</p>
-        <p>Hướng dẫn tân sinh viên làm thủ tục, phân luồng và giải đáp thông tin.</p>
+      <!-- OTHER -->
+      <div class="volunteer-group" data-category="other">
+        <div class="sub-item">
+          <span>Hoạt động cộng đồng khác</span>
+          <p>Đang cập nhật...</p>
+        </div>
       </div>
 
     </div>
@@ -68,4 +91,3 @@
 
 </body>
 </html>
-
