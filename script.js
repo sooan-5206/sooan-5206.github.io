@@ -1,14 +1,16 @@
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
-
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-});
-
-// ===== VOLUNTEER TAB FILTER =====
-
 document.addEventListener("DOMContentLoaded", function() {
 
+  /* ===== HAMBURGER ===== */
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  }
+
+  /* ===== VOLUNTEER TAB FILTER ===== */
   const tabs = document.querySelectorAll(".vol-tab");
   const groups = document.querySelectorAll(".vol-group");
 
@@ -33,8 +35,11 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
 
-    document.querySelector('.vol-group[data-category="ftu"]').classList.add("active");
-
+    // default show FTU
+    const defaultGroup = document.querySelector('.vol-group[data-category="ftu"]');
+    if (defaultGroup) {
+      defaultGroup.classList.add("active");
+    }
   }
 
 });
