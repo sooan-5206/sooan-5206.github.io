@@ -261,11 +261,6 @@ body {
 }
 
 /* ITEM giống dòng year + nội dung */
-.vol-item {
-  display: flex;
-  gap: 50px;
-  align-items: flex-start;
-}
 
 .vol-year {
   min-width: 80px;
@@ -390,6 +385,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
