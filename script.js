@@ -43,3 +43,23 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
 });
+
+const volItems = document.querySelectorAll(".vol-item");
+
+volItems.forEach(item => {
+  item.addEventListener("click", function() {
+
+    // Nếu đang mở thì đóng lại
+    if (this.classList.contains("active")) {
+      this.classList.remove("active");
+      return;
+    }
+
+    // Đóng tất cả
+    volItems.forEach(i => i.classList.remove("active"));
+
+    // Mở cái được click
+    this.classList.add("active");
+
+  });
+});
