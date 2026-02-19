@@ -292,3 +292,43 @@ body {
   }
 
 }
+
+/* ===== VOLUNTEER EVENT EXPAND ===== */
+
+.vol-item {
+  display: flex;
+  gap: 40px;
+  cursor: pointer;
+  padding: 15px 0;
+  transition: 0.4s ease;
+}
+
+.vol-left {
+  flex: 1;
+  transition: 0.4s ease;
+}
+
+.vol-images {
+  flex: 0;
+  opacity: 0;
+  display: flex;
+  gap: 15px;
+  transition: 0.4s ease;
+  overflow: hidden;
+}
+
+.vol-images img {
+  width: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Khi click active */
+.vol-item.active .vol-left {
+  flex: 0.4;
+}
+
+.vol-item.active .vol-images {
+  flex: 0.6;
+  opacity: 1;
+}
