@@ -296,51 +296,63 @@ body {
 /* ================= BEHANCE MINIMAL VOLUNTEER ================= */
 
 .vol-item {
-  display: flex;
-  gap: 30px;
-  padding: 25px 0;              /* giảm khoảng cách giữa các event */
+  display: block;              /* QUAN TRỌNG: bỏ flex */
+  padding: 25px 0;
   border-bottom: 1px solid #1a1a1a;
-  flex-wrap: wrap;              /* cho phép xuống dòng */
 }
 
+/* Row chứa year + title */
+.vol-info {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Year */
 .vol-year {
   min-width: 60px;
-  font-size: 15px;              /* bằng với title */
+  font-size: 15px;
   font-weight: 500;
   color: #aaa;
 }
 
-.vol-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
+/* Title */
 .vol-text {
-  font-size: 15px;              /* bằng với year */
+  font-size: 15px;
   font-weight: 500;
   color: #fff;
   line-height: 1.4;
 }
 
+/* Detail */
 .vol-detail {
   font-size: 13px;
   color: #888;
   margin-top: 5px;
+  margin-left: 90px;   /* đẩy detail thẳng hàng với title */
   line-height: 1.6;
   display: none;
 }
 
-/* Ảnh luôn nằm dưới thông tin */
+/* Images luôn nằm dưới */
 .vol-images {
-  width: 100%;
   margin-top: 15px;
+  margin-left: 90px;   /* thẳng hàng với title */
   display: none;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
 
-.vol-item.active .vol-detail,
+.vol-images img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.vol-item.active .vol-detail {
+  display: block;
+}
+
 .vol-item.active .vol-images {
   display: grid;
 }
@@ -367,6 +379,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
