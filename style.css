@@ -333,30 +333,41 @@ body {
   line-height: 1.6;
   display: none;
 }
+/* Khi active → year sáng hơn */
+.vol-item.active .vol-year {
+  color: #fff;
+  transition: 0.3s ease;
+}
 
-/* Images luôn nằm dưới */
+/* ===== IMAGES ===== */
+
 .vol-images {
-  margin-top: 15px;
-  margin-left: 90px;   /* thẳng hàng với title */
+  margin-top: 20px;
+  margin-left: 90px;         /* thẳng hàng với title */
+  display: none;
+  width: calc(100% - 90px);  /* không tràn khung */
+  max-width: 800px;          /* vừa khung web */
   display: none;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 20px;                 /* cách đều đẹp hơn */
 }
 
 .vol-images img {
   width: 100%;
-  height: 200px;
+  height: 180px;             /* nhỏ lại */
   object-fit: cover;
+  border-radius: 6px;        /* nhẹ nhàng hơn */
+  transition: 0.4s ease;
 }
 
-.vol-item.active .vol-detail {
-  display: block;
+.vol-images img:hover {
+  transform: scale(1.03);
 }
 
+/* active hiển thị */
 .vol-item.active .vol-images {
   display: grid;
 }
-
 
 /* Mobile */
 @media (max-width: 768px) {
@@ -379,6 +390,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
 
 
