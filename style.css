@@ -293,52 +293,91 @@ body {
 
 }
 
-/* ===== EVENT EXPAND IMAGE FIX ===== */
+/* ================= BEHANCE MINIMAL VOLUNTEER ================= */
 
 .vol-item {
   display: flex;
-  flex-direction: column;   /* quan trọng */
-  gap: 15px;
+  flex-direction: column;
+  padding: 80px 0;
+  border-bottom: 1px solid #1a1a1a;
   cursor: pointer;
-  padding: 20px 0;
 }
 
-.vol-left {
-  display: flex;
-  gap: 50px;
-  align-items: flex-start;
+.vol-year {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  color: #fff;
 }
-
-.vol-images {
-  display: none;
-  width: 100%;
-}
-
-.vol-item.active .vol-images {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-top: 10px;
-}
-
-.vol-images img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
 
 .vol-info {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  max-width: 800px;
+}
+
+.vol-text {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  color: #fff;
 }
 
 .vol-detail {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.5;
+  font-size: 15px;
+  color: #aaa;
+  line-height: 1.8;
+  margin-bottom: 30px;
   display: none;
 }
 
 .vol-item.active .vol-detail {
   display: block;
 }
+
+/* Images */
+
+.vol-images {
+  display: none;
+  margin-top: 20px;
+}
+
+.vol-item.active .vol-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.vol-images img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.vol-images img:hover {
+  transform: scale(1.03);
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .vol-year {
+    font-size: 22px;
+  }
+
+  .vol-text {
+    font-size: 20px;
+  }
+
+  .vol-item {
+    padding: 50px 0;
+  }
+
+  .vol-item.active .vol-images {
+    grid-template-columns: 1fr;
+  }
+}
+
