@@ -297,46 +297,44 @@ body {
 
 .vol-item {
   display: flex;
-  gap: 60px;
-  padding: 80px 0;
-  border-bottom: 1px solid #1a1a1a;
-  cursor: pointer;
   align-items: flex-start;
+  gap: 40px;
+  padding: 40px 0;
+  border-bottom: 1px solid #1a1a1a;
 }
 
 .vol-year {
-  min-width: 90px;
-  font-size: 20px;
-  font-weight: 600;
-  color: #fff;
-  opacity: 0.7;
+  min-width: 60px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #888;
+  letter-spacing: 1px;
 }
 
 .vol-info {
   display: flex;
   flex-direction: column;
-  max-width: 700px;
 }
 
 .vol-text {
-  font-size: 26px;
+  font-size: 15px;
   font-weight: 500;
-  line-height: 1.4;
   color: #fff;
-  letter-spacing: 0.5px;
+  line-height: 1.4;
 }
 
 .vol-detail {
-  font-size: 15px;
+  font-size: 13px;
   color: #aaa;
-  line-height: 1.8;
-  margin-top: 12px;
+  line-height: 1.6;
+  margin-top: 6px;
   display: none;
 }
 
 .vol-item.active .vol-detail {
   display: block;
 }
+
 
 
 /* Images */
@@ -364,23 +362,26 @@ body {
 }
 
 /* Mobile */
-
 @media (max-width: 768px) {
+
+  .vol-item {
+    flex-direction: column;
+    gap: 8px;
+    padding: 30px 0;
+  }
+
   .vol-year {
-    font-size: 22px;
+    font-size: 13px;
   }
 
   .vol-text {
-    font-size: 20px;
-  }
-
-  .vol-item {
-    padding: 50px 0;
+    font-size: 14px;
   }
 
   .vol-item.active .vol-images {
     grid-template-columns: 1fr;
   }
 }
+
 
 
