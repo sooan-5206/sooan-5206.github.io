@@ -611,7 +611,8 @@ body {
 .contact-left {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  justify-content: center;   /* 👈 thêm cái này */
+  height: 100%;
 }
 
 .contact-label {
@@ -762,5 +763,6 @@ body {
     align-self: flex-end;
   }
 }
+
 
 
