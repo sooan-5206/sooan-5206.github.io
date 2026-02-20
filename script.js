@@ -79,3 +79,30 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+
+/* ===== CERTIFICATE MODAL ===== */
+
+const certModal = document.getElementById("certModal");
+const certImage = document.getElementById("certImage");
+const certClose = document.getElementById("certClose");
+
+function openCert(src) {
+  certImage.src = src;
+  certModal.classList.add("active");
+}
+
+function closeCert() {
+  certModal.classList.remove("active");
+}
+
+if (certClose) {
+  certClose.addEventListener("click", closeCert);
+}
+
+if (certModal) {
+  certModal.addEventListener("click", function (e) {
+    if (e.target === certModal) {
+      closeCert();
+    }
+  });
+}
