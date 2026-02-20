@@ -702,18 +702,61 @@ body {
   transform: rotate(90deg);
 }
 
-.achievement-list {
-  margin-top: 20px;
-  margin-left: 135px;
-  color: #aaa;
+/* ================= ACHIEVEMENT CARDS ================= */
+
+.achievement-group {
+  margin-top: 30px;
+  margin-left: 135px; /* thẳng hàng với exp-text */
+  width: calc(100% - 135px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
-.achievement-list li {
-  margin-bottom: 8px;
+.achievement-card {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 16px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.3s ease;
 }
 
-.achievement-list li:hover {
+.achievement-card:hover {
+  background: #1a1a1a;
+  transform: translateY(-3px);
+}
+
+.achievement-text {
+  flex: 1;
+  font-size: 14px;
   color: #fff;
 }
+
+.achievement-date {
+  font-size: 13px;
+  color: #777;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .achievement-group {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .achievement-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .achievement-date {
+    align-self: flex-end;
+  }
+}
+
