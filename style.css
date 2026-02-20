@@ -580,13 +580,10 @@ body {
   margin: auto;
 }
 
-.contact-title {
-  font-size: 64px;
-  font-weight: 700;
-  letter-spacing: 4px;
-  text-align: center;   /* 👈 căn giữa */
-  margin-bottom: 100px;
-  color: #fff;
+.contact-page {
+  background: #111;
+  min-height: 100vh;
+  padding: 200px 0 150px 0;
 }
 
 .contact-list {
@@ -768,6 +765,7 @@ body {
 .contact-page .contact-title {
   color: #ffffff !important;
 }
+
 
 
 
