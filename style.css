@@ -773,8 +773,8 @@ body {
 .about-split {
   display: flex;
   width: 100%;
-  height: calc(100vh - 100px);
-  margin-top: 100px;
+  height: calc(100vh - 90px);
+  margin-top: 90px;
 }
 
 /* LEFT SIDE */
@@ -871,6 +871,7 @@ body {
   }
 
 }
+
 
 
 
