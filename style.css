@@ -705,7 +705,7 @@ body {
 /* ================= ACHIEVEMENT CARDS ================= */
 
 .achievement-group {
-  margin-top: 30px;
+  margin-top: 18px;
   margin-left: 135px; /* thẳng hàng với exp-text */
   width: calc(100% - 135px);
   display: flex;
@@ -713,10 +713,12 @@ body {
   gap: 18px;
 }
 
+/* ================= WHITE PAPER ACHIEVEMENT ================= */
+
 .achievement-card {
-  background: #111;
-  border: 1px solid #333;
-  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
   padding: 18px 22px;
   display: flex;
   align-items: center;
@@ -726,19 +728,20 @@ body {
 }
 
 .achievement-card:hover {
-  background: #1a1a1a;
   transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 .achievement-text {
   flex: 1;
   font-size: 14px;
-  color: #fff;
+  color: #111; /* chữ đen */
+  font-weight: 500;
 }
 
 .achievement-date {
   font-size: 13px;
-  color: #777;
+  color: #666;
 }
 
 /* MOBILE */
@@ -759,4 +762,5 @@ body {
     align-self: flex-end;
   }
 }
+
 
