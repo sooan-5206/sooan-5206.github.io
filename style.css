@@ -766,6 +766,61 @@ body {
   color: #ffffff !important;
 }
 
+/* ================= ABOUT SPLIT STYLE ================= */
+
+.about-split {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
+}
+
+/* MENU */
+.about-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-tab {
+  font-size: 18px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+
+.about-tab:hover {
+  opacity: 1;
+}
+
+.about-tab.active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* CONTENT */
+.about-group {
+  display: none;
+  max-width: 420px;
+}
+
+.about-group.active {
+  display: block;
+}
+
+.about-group h1 {
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.about-group p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+}
 
 
 
