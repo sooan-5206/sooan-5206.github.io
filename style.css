@@ -885,6 +885,38 @@ body {
   color: #fff;
 }
 
+/* ABOUT TAB EFFECT */
+
+.about-tab {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+/* Gạch chân */
+.about-tab::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  transition: 0.4s ease;
+}
+
+/* Khi active */
+.about-tab.active {
+  color: #fff;
+  transform: translateX(-120px); /* đẩy vào giữa ảnh */
+}
+
+.about-tab.active::after {
+  width: 100%;
+}
 
 
 
