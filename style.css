@@ -874,6 +874,16 @@ body {
 
 }
 
+/* CONTACT TITLE */
+
+.contact-title {
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-align: center;
+  margin-bottom: 100px;
+  color: #fff;
+}
 
 
 
